@@ -1,0 +1,13 @@
+<div class="hero-slider">
+    <div class="js-carousel-hero slick__carousel--shifting-fix hero-slider__slick-carousel">
+        {% for item in 1..4 %}
+            <div class="hero-slider__carousel-item-wrapper slick__slide">
+                <div class="hero-slider__carousel-item">
+                    {% include "../utils/picture.twig" with {
+                        "path": "./img/", "name": "slider-" ~ loop.index, "format": "jpg", "alt": "slider", "class": "hero-slider__carousel-item-img"
+                    } %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

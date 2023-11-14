@@ -1,0 +1,66 @@
+{% set menu = [
+    {
+        "title": "Home",
+        "link": "#home",
+    }, {
+        "title": "About",
+        "link": "#about",
+    }, {
+        "title": "Listings",
+        "link": "#listings",
+    }, {
+        "title": "Services",
+        "link": "#services",
+    }, {
+        "title": "Blogs",
+        "link": "#blogs",
+    }
+] %}
+
+<header class="header">
+    {% include "topLine.twig" %}
+    <div class="header__plug js-header-plug"></div>
+    <div class="header__main js-header">
+        <div class="container header__main-container">
+            {% include "mainMenu.twig" with menu %}
+
+            <div class="header__logo">
+                <div class="header__logo-icon">
+                    <svg width="50" height="50" focusable="false">
+                        <use href="./img/sprite.svg#logo"></use>
+                    </svg>
+                </div>
+
+                <div class="header__logo-text">
+                    Rezilla
+                </div>
+            </div>
+
+            <div class="header__profile">
+                <div class="header__login">
+                    <svg width="18" height="18" focusable="false">
+                        <use href="./img/sprite.svg#account"></use>
+                    </svg>
+                    <a href="#" class="header__login-link">Login/Register</a>
+                </div>
+
+                <div class="header__listing">
+                    <a href="#" class="btn btn-primary">
+                        <svg width="20" height="20" focusable="false">
+                            <use href="./img/sprite.svg#home"></use>
+                        </svg>
+                        Add Listing
+                    </a>
+                </div>
+            </div>
+
+            <div class="header__burger-button">
+                <svg width="24" height="21" focusable="false" class="header__burger-button-svg js-burger">
+                    <use href="./img/sprite.svg#menu"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    {% include "mobileMenu.twig" with menu %}
+</header>

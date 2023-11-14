@@ -1,0 +1,31 @@
+<div class="customers">
+    <div class="customers__blocks">
+        <div class="customers__block">
+            <div class="customers__list">
+                {% for item in 1..6 %}
+                    <div class="customers__list-item">
+                        {% include "../utils/picture.twig" with {
+                            "path": "./img/", "name": "customer-" ~ loop.index, "format": "jpg", "alt": "Customer", "class": "customers__img"
+                        } %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="customers__text">
+                72k+ Happy<br>Customers
+            </div>
+        </div>
+
+        <div class="customers__block">
+            <div class="customers__list">
+                {% include "../utils/picture.twig" with {
+                    "path": "./img/", "name": "listing-1", "format": "jpg", "alt": "Listing", "class": "customers__listing-img"
+                } %}
+            </div>
+
+            <div class="customers__text">
+                200+ New<br>Listings Everyday!
+            </div>
+        </div>
+    </div>
+</div>

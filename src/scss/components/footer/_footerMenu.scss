@@ -1,0 +1,25 @@
+@include media-breakpoint-up(lg) {
+    .footer-menu {
+        &__title {
+            color: $color-light-black;
+            font-size: $fs-medium;
+            font-weight: $fw-medium;
+            margin-bottom: 25px;
+        }
+
+        &__li {
+            margin-bottom: 5px;
+        }
+
+        &__link {
+            color: $color-black-grey;
+            font-size: $fs-base;
+            line-height: $lh-base;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

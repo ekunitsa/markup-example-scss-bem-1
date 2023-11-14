@@ -1,0 +1,37 @@
+.main-menu {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+        flex: 1 1 40%;
+    }
+
+    &__ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+
+        @include media-breakpoint-up(xl) {
+            gap: 4px;
+        }
+    }
+
+    &__link {
+        border-radius: 30px;
+        color: $color-black-grey;
+        display: inline-block;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        padding: 13px 10px;
+        text-decoration: none;
+
+        @include media-breakpoint-up(xl) {
+            font-size: $fs-base;
+            padding: 13px 16px;
+        }
+
+        &:hover {
+            background-color: $color-blue-30;
+        }
+    }
+}

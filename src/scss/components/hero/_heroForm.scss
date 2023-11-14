@@ -1,0 +1,163 @@
+.hero-form {
+    background-color: $color-white;
+    border-radius: 20px;
+    box-shadow: 10px 30px 50px 0 rgba(0, 0, 0, 0.05);
+    margin-bottom: 60px;
+    margin-top: 40px;
+    padding: 20px 20px 40px;
+
+    @include media-breakpoint-up(md) {
+        border-radius: 30px;
+        margin-bottom: 0;
+        margin-top: 0;
+        max-width: 420px;
+        padding: 35px 40px 60px;
+        width: 100%;
+    }
+
+    &__btn {
+        width: 100%;
+    }
+
+    &__oneline {
+        margin-bottom: 20px;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 30px;
+        }
+
+        &--submit {
+            margin-top: 40px;
+
+            @include media-breakpoint-up(md) {
+                margin-top: 60px;
+            }
+        }
+    }
+
+    &__advance-search {
+        margin-top: 10px;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 15px;
+        }
+    }
+
+    &__advance-search-link {
+        align-items: center;
+        color: $color-primary;
+        display: flex;
+        font-size: $fs-small;
+        gap: 10px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__header {
+        border-bottom: 1px solid $color-extra-light-grey;
+        margin: 0 -20px 40px -20px;
+        padding: 0 50px;
+
+        @include media-breakpoint-up(md) {
+            margin: 0 -40px 50px -40px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    &__tab {
+        border-bottom: 2px solid transparent;
+        color: $color-grey;
+        display: block;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        padding: 0 20px 15px;
+        text-decoration: none;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 40px 20px;
+        }
+
+        &.active {
+            border-bottom: 2px solid $color-primary;
+            color: $color-primary;
+        }
+
+        &:hover:not(.active) {
+            opacity: 0.5;
+        }
+    }
+
+    &__input {
+        background-color: $color-extra-light-grey-20;
+        border-radius: 20px;
+        border: 0;
+        font-size: $fs-base;
+        height: 50px;
+        padding: 12px 18px;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            height: 60px;
+            padding: 16px 20px;
+        }
+    }
+    // select 2 plugin
+    .select2-container--default {
+        width: 100% !important;
+
+        .select2-selection__rendered {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .select2-selection--single {
+            background-color: $color-extra-light-grey-20;
+            border-radius: 20px;
+            border: 0;
+            font-size: $fs-base;
+            height: 50px;
+            padding: 12px 18px;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                height: 60px;
+                padding: 16px 20px;
+            }
+
+            .select2-selection__arrow {
+                height: 100%;
+                right: 20px;
+
+                b {
+                    border-color: $color-ligth-grey transparent transparent transparent;
+                    border-radius: 8px;
+                    border-width: 8px 9px 0;
+                    margin-left: -6px;
+                    margin-top: -4px;
+                }
+            }
+        }
+
+        &.select2-container--open {
+            .select2-selection--single .select2-selection__arrow b {
+                transform: rotateX(180deg);
+            }
+        }
+    }
+}

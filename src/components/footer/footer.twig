@@ -1,0 +1,126 @@
+{% set quickLinksMenu = [
+    {
+        "title": "Home",
+        "link": "#",
+    }, {
+        "title": "About",
+        "link": "#",
+    }, {
+        "title": "Listings",
+        "link": "#",
+    }, {
+        "title": "Services",
+        "link": "#",
+    }, {
+        "title": "Blogs",
+        "link": "#",
+    }, {
+        "title": "Become a Agent",
+        "link": "#",
+    }
+] %}
+
+{% set discoveryMenu = [
+    {
+        "title": "Canada",
+        "link": "#",
+    }, {
+        "title": "United States",
+        "link": "#",
+    }, {
+        "title": "Germany",
+        "link": "#",
+    }, {
+        "title": "Africa",
+        "link": "#",
+    }, {
+        "title": "India",
+        "link": "#",
+    }
+] %}
+
+{% set termsMenu = [
+    {
+        "title": "Terms and Conditions",
+        "link": "#",
+    }, {
+        "title": "Privacy Policy",
+        "link": "#",
+    }, {
+        "title": "Disclaimer",
+        "link": "#",
+    }
+] %}
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container footer__top-container">
+            <div class="footer__contacts">
+                <div class="footer__logo">
+                    <div class="footer__logo-icon">
+                        <svg width="50" height="50" focusable="false">
+                            <use href="./img/sprite.svg#logo"></use>
+                        </svg>
+                    </div>
+
+                    <div class="footer__logo-text">
+                        Rezilla
+                    </div>
+                </div>
+
+                <div class="footer__address">
+                    2728 Hickory StreetSalt <br>Lake City, UT 84104
+                </div>
+
+
+                <div class="footer__contact-us">
+                    <div class="footer__phone">
+                        <svg width="16" height="16" focusable="false" class="footer__phone-icon">
+                            <use href="./img/sprite.svg#phone"></use>
+                        </svg>
+                        <a href="tel:+12062142298" class="footer__phone-link">+1 206-214-2298</a>
+                    </div>
+
+                    <div class="footer__email">
+                        <svg width="16" height="12" focusable="false" class="footer__email-icon">
+                            <use href="./img/sprite.svg#email"></use>
+                        </svg>
+                        <a href="mailto:support@rezilla.com" class="footer__email-link">support@rezilla.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                {% include "footerMenu.twig" with { "menu": quickLinksMenu, "title": "Quick Links" } %}
+            </div>
+
+            <div class="footer__discovery">
+                {% include "footerMenu.twig" with { "menu": discoveryMenu, "title": "Discovery" } %}
+            </div>
+
+            <div class="footer__subscribe">
+                {% include "subscribe.twig" %}
+
+                {% include "social.twig" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="container footer__bottom-container">
+            <div class="footer__copy">
+                © Rezilla – All rights reserved
+            </div>
+
+            <div class="terms-menu">
+                <ul class="terms-menu__ul">
+                    {% for item in termsMenu %}
+                        <li class="terms-menu__li">
+                            <a href="{{ item.link }}" class="terms-menu__link">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

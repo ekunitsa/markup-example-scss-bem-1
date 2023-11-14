@@ -1,0 +1,117 @@
+{% set blog = [
+    {
+        "date": "28",
+        "day": "Tue",
+        "title": "Top 10 Home Buying Mistakes to Avoid",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-1"
+    },{
+        "date": "08",
+        "day": "Mon",
+        "title": "How to Stage Your Home for a Quick Sale",
+        "description": "Etiam eget elementum elit",
+        "image": "blog-2"
+    }, {
+        "date": "26",
+        "day": "Wed",
+        "title": "5 Tips for First-Time Home Sellers",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-3"
+    }, {
+        "date": "28",
+        "day": "Tue",
+        "title": "Top 10 Home Buying Mistakes to Avoid",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-1"
+    }, {
+        "date": "08",
+        "day": "Mon",
+        "title": "How to Stage Your Home for a Quick Sale",
+        "description": "Etiam eget elementum elit",
+        "image": "blog-2"
+    }, {
+        "date": "26",
+        "day": "Wed",
+        "title": "5 Tips for First-Time Home Sellers",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-3"
+    }, {
+        "date": "28",
+        "day": "Tue",
+        "title": "Top 10 Home Buying Mistakes to Avoid",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-1"
+    }, {
+        "date": "08",
+        "day": "Mon",
+        "title": "How to Stage Your Home for a Quick Sale",
+        "description": "Etiam eget elementum elit",
+        "image": "blog-2"
+    }, {
+        "date": "26",
+        "day": "Wed",
+        "title": "5 Tips for First-Time Home Sellers",
+        "description": "Etiam eget elementum elit. Aenean dignissim dapibus vestibulum",
+        "image": "blog-3"
+    },
+] %}
+
+<section class="section section--margin section--padding section--purple blog" data-target="blogs">
+    <div class="container">
+        <div class="title__wrapper title__wrapper--center title__wrapper--margin-bottom-big">
+            <div class="title__sub title__sub--white">
+                What’s trending
+            </div>
+
+            <div class="title__main title__main--white">
+                <h2>Latest Blogs & Posts</h2>
+            </div>
+        </div>
+
+        <div class="js-carousel-blog">
+            {% for item in blog %}
+                <div class="blog__item">
+                    <div class="blog__image">
+                        <a href="#" class="blog__image-link">
+                            <div class="blog__date-wrapper">
+                                <div class="blog__date">
+                                    {{ item.date }}
+                                </div>
+
+                                <div class="blog__day">
+                                    {{ item.day }}
+                                </div>
+                            </div>
+
+                            {% include "./utils/picture.twig" with {
+                                "path": "./img/", "name": item.image, "format": "jpg", "alt": item.title, "class": "blog__img"
+                            } %}
+                        </a>
+                    </div>
+
+                    <div class="blog__title">
+                        <a href="#" class="blog__title-link">
+                            {{ item.title }}
+                        </a>
+                    </div>
+
+                    <div class="blog__description">
+                        {{ item.description }}
+                    </div>
+
+                    <div class="blog__button-circle">
+                        <a href="#" class="btn btn-round-invert" aria-label="Read more">
+                            <svg width="16" height="16" focusable="false">
+                                <use href="./img/sprite.svg#arrow-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="blog__mobile-button">
+            <a href="#" class="btn btn-primary-invert">View more blogs</a>
+        </div>
+    </div>
+</section>

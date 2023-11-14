@@ -1,0 +1,13 @@
+<div class="footer-menu">
+    <div class="footer-menu__title">
+        {{ title }}
+    </div>
+
+    <ul class="footer-menu__ul">
+        {% for item in menu %}
+            <li class="footer-menu__li">
+                <a href="{{ item.link }}" class="footer-menu__link">{{ item.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

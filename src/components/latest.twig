@@ -1,0 +1,180 @@
+{% set latest = [
+    {
+        "badge": "popular",
+        "type": "rent",
+        "cost": "5,970",
+        "title": "Tranquil Haven in the Woods",
+        "description": "103 Wright CourtBurien, WA 98168",
+        "image": "latest-1",
+        "beds": 4,
+        "bath": 3,
+    }, {
+        "badge": "new",
+        "type": "sell",
+        "cost": "1,970",
+        "title": "Serene Retreat by the Lake",
+        "description": "1964 Jehovah Drive, VA 22408",
+        "image": "latest-2",
+        "beds": 3,
+        "bath": 2,
+    }, {
+        "badge": "discount",
+        "type": "rent",
+        "cost": "3,450",
+        "title": "Charming Cottage in the Meadow",
+        "description": "1508 Centennial Farm RoadHarlan, 51537",
+        "image": "latest-3",
+        "beds": 4,
+        "bath": 4,
+    }, {
+        "badge": "popular",
+        "type": "sell",
+        "cost": "2,389",
+        "title": "Grand Estate on the Hilltop",
+        "description": "103 Wright CourtBurien, WA 98168",
+        "image": "latest-4",
+        "beds": 4,
+        "bath": 1,
+    }, {
+        "badge": "popular",
+        "type": "rent",
+        "cost": "5,970",
+        "title": "Tranquil Haven in the Woods",
+        "description": "103 Wright CourtBurien, WA 98168",
+        "image": "latest-1",
+        "beds": 4,
+        "bath": 3,
+    }, {
+        "badge": "new",
+        "type": "sell",
+        "cost": "1,970",
+        "title": "Serene Retreat by the Lake",
+        "description": "1964 Jehovah Drive, VA 22408",
+        "image": "latest-2",
+        "beds": 3,
+        "bath": 2,
+    }, {
+        "badge": "discount",
+        "type": "rent",
+        "cost": "3,450",
+        "title": "Charming Cottage in the Meadow",
+        "description": "1508 Centennial Farm RoadHarlan, 51537",
+        "image": "latest-3",
+        "beds": 4,
+        "bath": 4,
+    }, {
+        "badge": "popular",
+        "type": "sell",
+        "cost": "2,389",
+        "title": "Grand Estate on the Hilltop",
+        "description": "103 Wright CourtBurien, WA 98168",
+        "image": "latest-4",
+        "beds": 4,
+        "bath": 1,
+    },
+] %}
+
+<section class="section section--margin latest" data-target="listings">
+    <div class="container">
+        <div class="latest__header">
+            <div class="title__wrapper title__wrapper--margin-bottom-big latest__title">
+                <div class="title__sub title__sub--blue">
+                    Checkout our new
+                </div>
+
+                <div class="title__main">
+                    <h2>Latest Listed Properties</h2>
+                </div>
+
+                <div class="title__description">
+                    Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus.
+                </div>
+            </div>
+
+            <div class="latest__buttons js-latest-btns">
+                <button class="btn btn-primary-invert btn-primary-invert--bordered active js-latest-all" aria-label="All">
+                    All
+                </button>
+
+                <button class="btn btn-primary-invert btn-primary-invert--bordered js-latest-sell" data-filter="sell" aria-label="Sell">
+                    Sell
+                </button>
+
+                <button class="btn btn-primary-invert btn-primary-invert--bordered js-latest-rent" data-filter="rent" aria-label="Rent">
+                    Rent
+                </button>
+            </div>
+        </div>
+
+        <div class="js-carousel-latest">
+            {% for item in latest %}
+                <div class="latest__item js-latest-item" data-type="{{ item.type }}">
+                    <div class="latest__item-image">
+                        {% include "./utils/picture.twig" with {
+                            "path": "./img/", "name": item.image, "format": "jpg", "alt": item.title, "class": "latest__item-img"
+                        } %}
+
+                        <div class="latest__badge latest__badge--{{ item.badge }}">
+                            {% if item.badge == 'popular' %}
+                                <svg width="14" height="14" focusable="false" class="latest__badge--{{ item.badge }}-svg">
+                                    <use href="./img/sprite.svg#popular"></use>
+                                </svg>
+                                <span>Popular</span>
+                            {% endif %}
+
+                            {% if item.badge == 'new' %}
+                                <svg width="14" height="14" focusable="false" class="latest__badge--{{ item.badge }}-svg">
+                                    <use href="./img/sprite.svg#new"></use>
+                                </svg>
+                                <span>New Listing</span>
+                            {% endif %}
+
+                            {% if item.badge == 'discount' %}
+                                <svg width="8" height="14" focusable="false" class="latest__badge--{{ item.badge }}-svg">
+                                    <use href="./img/sprite.svg#discount"></use>
+                                </svg>
+                                <span>Discounted Price</span>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="latest__item-cost">
+                       $ {{ item.cost }}
+                    </div>
+
+                    <div class="latest__item-title">
+                        {{ item.title }}
+                    </div>
+
+                    <div class="latest__item-description">
+                        {{ item.description }}
+                    </div>
+
+                    <div class="latest__item-info">
+                        {% if item.beds %}
+                            <div class="latest__item-info-beds">
+                                <svg width="22" height="16" focusable="false" class="latest__item-info-beds-svg">
+                                    <use href="./img/sprite.svg#bed"></use>
+                                </svg>
+                                <span>{{ item.beds }} Beds</span>
+                            </div>
+                        {% endif %}
+
+                        {% if item.bath %}
+                            <div class="latest__item-info-bath">
+                                <svg width="18" height="18" focusable="false" class="latest__item-info-bath-svg">
+                                    <use href="./img/sprite.svg#bath"></use>
+                                </svg>
+                                <span>{{ item.bath }} Bath</span>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="blog__mobile-button">
+            <a href="#" class="btn btn-primary-invert btn-primary-invert--bordered">View more properties</a>
+        </div>
+    </div>
+</section>

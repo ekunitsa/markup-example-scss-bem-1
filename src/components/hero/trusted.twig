@@ -1,0 +1,19 @@
+<div class="trusted">
+    <div class="trusted__title-wrapper">
+        <div class="trusted__title">
+            Trusted by 100+ Companies across the globe!
+        </div>
+    </div>
+
+    <div class="trusted__list">
+        {% for item in 1..6 %}
+             <div class="trusted__item">
+                <a href="#" class="trusted__link">
+                    {% include "../utils/picture.twig" with {
+                        "path": "./img/", "name": "trusted-" ~ loop.index, "format": "png", "alt": "Trusted logo", "class": "trusted__item-img"
+                    } %}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

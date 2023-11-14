@@ -1,0 +1,25 @@
+.terms-menu {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        display: block;
+    }
+
+    &__ul {
+        display: flex;
+        gap: 25px;
+
+        @include media-breakpoint-between(lg, xl) {
+            padding-right: 60px;
+        }
+    }
+
+    &__link {
+        color: $color-ligth-grey;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

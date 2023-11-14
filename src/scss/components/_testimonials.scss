@@ -1,0 +1,184 @@
+.testimonials {
+    overflow: hidden;
+
+    @include media-breakpoint-up(md) {
+        overflow: visible;
+    }
+
+    &__container {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            display: grid;
+            gap: 50px;
+            grid-template-columns: calc(50% - 25px) calc(50% - 25px); // fix for slick. Can't use 1fr 1fr.
+        }
+    }
+
+    &__controls {
+        display: none;
+
+        @include media-breakpoint-up(md) {
+            display: flex;
+            gap: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            gap: 50px;
+        }
+    }
+
+    &__title {
+        @include media-breakpoint-up(md) {
+            max-width: 415px;
+        }
+    }
+
+    &__carousel-cell {
+        margin: -40px -20px 0 -20px;
+        padding-top: 10px;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            margin: -20px 0 0 0;
+            padding-top: 0;
+        }
+
+        &::before {
+            @include gradient-circle("blue", 40px, -30deg, null);
+
+            content: "";
+            position: absolute;
+            right: 60px;
+            top: 0;
+
+            @include media-breakpoint-up(md) {
+                height: 60px;
+                left: 0;
+                right: auto;
+                top: -5px;
+                width: 60px;
+            }
+        }
+    }
+
+    &__stars {
+        display: flex;
+        gap: 4px;
+
+        &-active {
+            color: $color-yellow;
+        }
+
+        &-unactive {
+            color: $color-extra-light-grey;
+        }
+    }
+
+    &__item {
+        background-color: $color-white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+        margin: 20px 20px 30px;
+        padding: 30px 30px 40px;
+
+        @include media-breakpoint-up(md) {
+            border-radius: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 70px;
+        }
+    }
+
+    &__text {
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-medium;
+        }
+    }
+
+    &__quotes {
+        color: $color-yellow;
+        margin-bottom: 12px;
+    }
+
+    &__person {
+        border-top: 1px solid $color-extra-light-grey;
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    &__photo {
+        min-width: 50px;
+        width: 50px;
+    }
+
+    &__photo-img {
+        border-radius: 50%;
+        min-width: 50px;
+        width: 50px;
+    }
+
+    &__name {
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-medium;
+        }
+    }
+
+    &__name-stars {
+        @include media-breakpoint-up(lg) {
+            align-items: center;
+            display: flex;
+            gap: 15px;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 0;
+
+        @include media-breakpoint-up(lg) {
+            flex-direction: column;
+            height: 100%;
+            position: absolute;
+            right: 30px;
+            top: 0;
+        }
+
+        li {
+            background-color: $color-ligth-grey;
+            border-radius: 4px;
+            cursor: pointer;
+            height: 4px;
+            max-width: 40px;
+            opacity: 0.5;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                height: 100%;
+                max-height: 40px;
+                width: 4px;
+            }
+
+            &.slick-active {
+                background-color: $color-black-grey;
+            }
+
+            button {
+                font-size: 0;
+            }
+        }
+    }
+}

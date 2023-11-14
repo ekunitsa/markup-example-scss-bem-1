@@ -1,0 +1,93 @@
+.mobile-menu {
+    background-color: $color-white;
+    height: 100vh;
+    margin-right: -90%;
+    overflow: auto;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: $transition-long;
+    width: 90%;
+    z-index: 200;
+
+    @include media-breakpoint-up(md) {
+        margin-right: -400px;
+        width: 400px;
+    }
+
+    &.active {
+        margin-right: 0;
+    }
+
+    &__button-svg {
+        color: $color-light-black;
+        cursor: pointer;
+        transition: $transition-global;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__header {
+        margin-bottom: 15px;
+        text-align: right;
+    }
+
+    &__close-svg {
+        border-radius: 50%;
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        cursor: pointer;
+        height: 35px;
+        padding: 8px;
+        transition: $transition-global;
+        width: 35px;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+
+    &__link {
+        color: $color-black-grey;
+        display: inline-block;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        padding: 10px 0;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    &__ul {
+        border-bottom: 1px solid $color-grey;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    &__login-link {
+        color: $color-black-grey;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__login {
+        color: $color-black-grey;
+        margin-bottom: 15px;
+    }
+
+    &__listing-btn {
+        width: 100%;
+    }
+}

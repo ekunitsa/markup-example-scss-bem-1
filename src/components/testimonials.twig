@@ -1,0 +1,106 @@
+{% set testimonials = [
+    {
+        "text": "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home. We couldn't be happier with our new place!",
+        "name": "Barbara D. Smith",
+        "stars": 4,
+        "photo": "testimonial-1"
+    }, {
+        "text": "I highly recommend Jodi J. Appleby. She was attentive to our needs and worked tirelessly to find us the perfect home.",
+        "name": "Barbara",
+        "stars": 3,
+        "photo": "testimonial-1"
+    }, {
+        "text": "I highly recommend Jodi J. Appleby.",
+        "name": "Smith",
+        "stars": 5,
+        "photo": "testimonial-1"
+    }
+] %}
+
+<section class="section section--margin testimonials">
+    <div class="container">
+        <div class="testimonials__container">
+            <div class="testimonials__info-cell">
+                <div class="title__wrapper title__wrapper--margin-bottom-big testimonials__title">
+                    <div class="title__sub title__sub--blue">
+                        Testimonials
+                    </div>
+
+                    <div class="title__main">
+                        <h2>Look What Our Customers Say!</h2>
+                    </div>
+
+                    <div class="title__description">
+                        Fusce venenatis tellus a felis scelerisque, non pulvinar est pellentesque.
+                    </div>
+                </div>
+                <div class="testimonials__controls">
+                    <button class="js-testimonials-prev testimonials__controls-arrows testimonials__controls-prev btn btn-round-blue" aria-label="Testimonial previous">
+                        <svg width="16" height="16" focusable="false">
+                            <use href="./img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+
+                    <button class="js-testimonials-next testimonials__controls-arrows testimonials__controls-next btn btn-round-blue" aria-label="Testimonial next">
+                        <svg width="16" height="16" focusable="false">
+                            <use href="./img/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="testimonials__carousel-cell">
+                <div class="js-carousel-testimonials">
+                 {% for item in testimonials %}
+                    <div class="testimonials__item-wrapper">
+                        <div class="testimonials__item">
+                            <div class="testimonials__quotes">
+                                <svg width="60" height="37" focusable="false">
+                                    <use href="./img/sprite.svg#quotes"></use>
+                                </svg>
+                            </div>
+
+                            <div class="testimonials__text">
+                                {{ item.text }}
+                            </div>
+
+                            <div class="testimonials__person">
+                                <div class="testimonials__photo">
+                                    {% include "./utils/picture.twig" with {
+                                        "path": "./img/", "name": item.photo, "format": "jpg", "alt": item.name, "class": "testimonials__photo-img"
+                                    } %}
+                                </div>
+                                <div class="testimonials__name-stars">
+                                    <div class="testimonials__name">
+                                        {{ item.name }}
+                                    </div>
+
+                                    <div class="testimonials__stars">
+                                        {% if item.stars > 0 %}
+                                            {% for i in 1..item.stars %}
+                                                <div class="testimonials__stars-active">
+                                                    <svg width="14" height="14" focusable="false">
+                                                        <use href="./img/sprite.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        {% if item.stars < 5 %}
+                                            {% for i in 1..(5 - item.stars) %}
+                                                <div class="testimonials__stars-unactive">
+                                                    <svg width="14" height="14" focusable="false">
+                                                        <use href="./img/sprite.svg#star"></use>
+                                                    </svg>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

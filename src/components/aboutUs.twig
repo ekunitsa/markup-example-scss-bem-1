@@ -1,0 +1,89 @@
+<section class="section about-us__section about-us" data-target="about">
+    <div class="container">
+        <div class="about-us__grid">
+            <div class="title__wrapper about-us__grid-title">
+                <div class="title__sub title__sub--blue">
+                    Who are we
+                </div>
+
+                <div class="title__main">
+                    <h2>Assisting individuals in locating the appropriate real estate.</h2>
+                </div>
+
+                <div class="title__description">
+                    Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus. Nulla convallis ipsum molestie nibh malesuada, ac malesuada leo volutpat.
+                </div>
+            </div>
+
+            <div class="about-us__grid-images">
+                <div class="about-us__circle">
+                    <svg width="124" height="124" focusable="false" class="about-us__circle-svg">
+                        <use href="./img/sprite.svg#circle-2022"></use>
+                    </svg>
+                </div>
+
+                <div class="about-us__image">
+                    <div class="about-us__image-left">
+                        {% include "./utils/picture.twig" with {
+                            "path": "./img/", "name": "who-1", "format": "jpg", "alt": "Who are we", "class": "about-us__image-img about-us__image-left-img"
+                        } %}
+                    </div>
+
+                    <div class="about-us__image-right">
+                        <div class="about-us__image-right-top">
+                            {% include "./utils/picture.twig" with {
+                                "path": "./img/", "name": "who-2", "format": "jpg", "alt": "Who are we", "class": "about-us__image-img about-us__image-right-top-img"
+                            } %}
+                        </div>
+
+                        <div class="about-us__image-right-bottom">
+                            {% include "./utils/picture.twig" with {
+                                "path": "./img/", "name": "who-3", "format": "jpg", "alt": "Who are we", "class": "about-us__image-img about-us__image-right-bottom-img"
+                            } %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-us__grid-info">
+                <div class="about-us__info">
+                    <div class="about-us__info-item">
+                        <div class="about-us__info-item-icon">
+                            <svg width="34" height="34" focusable="false" class="about-us__info-item-icon-svg">
+                                <use href="./img/sprite.svg#who-1"></use>
+                            </svg>
+                        </div>
+
+                        <div class="about-us__info-item-content">
+                            <div class="about-us__info-item-title">
+                                Donec porttitor euismod
+                            </div>
+
+                            <div class="about-us__info-item-description">
+                                Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-us__info-item">
+                        <div class="about-us__info-item-icon">
+                            <svg width="34" height="37" focusable="false" class="about-us__info-item-icon-svg">
+                                <use href="./img/sprite.svg#who-2"></use>
+                            </svg>
+                        </div>
+
+                        <div class="about-us__info-item-content">
+                            <div class="about-us__info-item-title">
+                                Donec porttitor euismod
+                            </div>
+
+                            <div class="about-us__info-item-description">
+                                Nullam a lacinia ipsum, nec dignissim purus. Nulla
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

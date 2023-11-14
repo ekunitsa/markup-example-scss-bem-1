@@ -1,0 +1,160 @@
+.blog {
+    &__item {
+        margin-bottom: 30px;
+
+        &:nth-child(n+4) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: block;
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 75px;
+        }
+    }
+
+    &__image {
+        position: relative;
+        width: 100%;
+    }
+
+    &__img {
+        border-radius: 20px;
+        box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.2);
+        margin-bottom: 15px;
+        overflow: hidden;
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__date-wrapper {
+        background-color: $color-white;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.25);
+        left: 30px;
+        min-width: 55px;
+        padding: 10px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+
+        @include media-breakpoint-up(lg) {
+            left: 50px;
+        }
+    }
+
+    &__date {
+        color: $color-black-grey;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        line-height: 1;
+        margin-bottom: 5px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-medium;
+        }
+    }
+
+    &__day {
+        color: $color-grey;
+        font-size: $fs-small;
+        line-height: 1;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-base;
+        }
+    }
+
+    &__title {
+        margin-bottom: 5px;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title-link {
+        color: $color-white;
+        display: inline-block;
+        font-size: $fs-medium;
+        font-style: normal;
+        font-weight: $fw-medium;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-large;
+        }
+    }
+
+    &__description {
+        color: $color-extra-light-grey;
+        font-size: $fs-small;
+        line-height: $lh-base;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-base;
+            margin-bottom: 0;
+        }
+    }
+
+    &__mobile-button {
+        margin-top: 50px;
+
+        @include media-breakpoint-up(md) {
+            display: none;
+        }
+    }
+
+    &__button-circle {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            bottom: 0;
+            display: block;
+            position: absolute;
+            right: 1px;
+        }
+    }
+
+    .slick-initialized {
+        .slick-slide {
+            height: inherit;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        margin-top: 70px;
+
+        li {
+            background-color: $color-white;
+            border-radius: 4px;
+            cursor: pointer;
+            height: 4px;
+            max-width: 100px;
+            opacity: 0.5;
+            width: 100%;
+
+            &.slick-active {
+                opacity: 1;
+            }
+
+            button {
+                font-size: 0;
+            }
+        }
+    }
+}

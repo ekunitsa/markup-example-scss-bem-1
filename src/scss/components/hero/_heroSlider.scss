@@ -1,0 +1,98 @@
+.hero-slider {
+    &__carousel-item-img {
+        border-radius: 20px;
+        box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.2);
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+            border-radius: 30px;
+        }
+    }
+
+    &__carousel-item {
+        margin: 50px 50px 60px;
+    }
+
+    &__slick-carousel {
+        margin: -50px -50px -60px -50px;
+        position: relative;
+
+        &::before {
+            @include gradient-circle("blue", 40px, 30deg, 1);
+
+            content: "";
+            position: absolute;
+            right: 90px;
+            top: 20px;
+            z-index: -1;
+
+            @include media-breakpoint-up(md) {
+                height: 60px;
+                right: 20px;
+                top: 20px;
+                width: 60px;
+            }
+        }
+    }
+
+    .slick-arrow {
+        margin-top: -30px;
+        position: absolute;
+        top: 50%;
+        z-index: 5;
+    }
+
+    .slick-next {
+        right: 40px;
+
+        @include media-breakpoint-up(md) {
+            right: 25px;
+        }
+    }
+
+    .slick-prev {
+        left: 40px;
+
+        @include media-breakpoint-up(md) {
+            left: 25px;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: -50px;
+        padding: 0 30px;
+        padding: 0 80px;
+
+        @include media-breakpoint-up(lg) {
+            gap: 40px;
+            padding: 0 120px;
+        }
+
+        li {
+            background-color: $color-white;
+            border-radius: 4px;
+            cursor: pointer;
+            height: 4px;
+            max-width: 40px;
+            opacity: 0.5;
+            width: 100%;
+
+            @include media-breakpoint-up(lg) {
+                max-width: 100px;
+            }
+
+            &.slick-active {
+                background-color: $color-blue;
+                opacity: 1;
+            }
+
+            button {
+                font-size: 0;
+            }
+        }
+    }
+}

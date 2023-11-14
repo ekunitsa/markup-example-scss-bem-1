@@ -1,0 +1,52 @@
+{% set neighborhood = [
+    {
+        "value": "216",
+        "name": "New York City, NY"
+    }, {
+        "value": "141",
+        "name": "Houston, TX"
+    }, {
+        "value": "212",
+        "name": "San Diego, CA"
+    }, {
+        "value": "183",
+        "name": "Philadelphia, PA"
+    }, {
+        "value": "112",
+        "name": "San Francisco, CA"
+    }
+] %}
+
+<section class="section section--margin neighborhood">
+    <div class="container neighborhood__container">
+        <div class="title__wrapper title__wrapper--margin-bottom-big">
+            <div class="title__sub title__sub--blue">
+                Areas across the town
+            </div>
+
+            <div class="title__main">
+                <h2>Neighborhood Properties</h2>
+            </div>
+        </div>
+
+        <div class="neighborhood__list">
+            {% for item in neighborhood %}
+                <div class="neighborhood__item neighborhood__item--grid-{{ loop.index }}">
+                    {% include "./utils/picture.twig" with {
+                        "path": "./img/", "name": "neighborhood-" ~ loop.index, "format": "jpg", "alt": item.name, "class": "neighborhood__img"
+                    } %}
+
+                    <div class="neighborhood__description">
+                        <div class="neighborhood__value">
+                            {{ item.value }}
+                        </div>
+
+                        <div class="neighborhood__name">
+                            {{ item.name }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

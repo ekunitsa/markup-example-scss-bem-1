@@ -1,0 +1,101 @@
+.header {
+    &__main {
+        background-color: $color-white;
+        height: 80px;
+        padding: 15px 0;
+        transition: $transition-global;
+        width: 100%;
+
+        @include media-breakpoint-up(lg) {
+            height: 85px;
+        }
+
+        &.sticky {
+            box-shadow: 0 0 10px 5px $color-black-20;
+            left: 0;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+    }
+
+    &__plug {
+        height: 0;
+
+        &.active {
+            height: 80px;
+
+            @include media-breakpoint-up(lg) {
+                height: 85px;
+            }
+        }
+    }
+
+    &__main-container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__profile {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            flex: 1 1 40%;
+            gap: 20px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__logo {
+        align-items: center;
+        display: flex;
+        font-size: $fs-medium;
+        font-weight: $fw-semi-bold;
+        gap: 8px;
+
+        @include media-breakpoint-up(lg) {
+            flex: 1 1 20%;
+            justify-content: center;
+        }
+    }
+
+    &__login {
+        @include media-breakpoint-up(lg) {
+            align-items: center;
+            color: $color-black-grey;
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    &__login-link {
+        @include media-breakpoint-up(lg) {
+            color: $color-black-grey;
+            font-size: $fs-base;
+            font-weight: $fw-medium;
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__burger-button {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    &__burger-button-svg {
+        color: $color-light-black;
+        cursor: pointer;
+        transition: $transition-global;
+
+        &:hover {
+            color: $color-red;
+        }
+    }
+}

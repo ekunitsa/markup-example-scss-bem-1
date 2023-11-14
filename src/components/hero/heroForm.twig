@@ -1,0 +1,105 @@
+<div class="hero-form">
+    <div class="hero-form__header">
+        <div class="hero-form__tabs">
+            <a href="javascript:" class="hero-form__tab active js-tab-link" data-tab="sale">
+                For Sale
+            </a>
+
+            <a href="javascript:" class="hero-form__tab js-tab-link" data-tab="rent">
+                For Rent
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-form__content active js-tab-target" data-tab-target="sale">
+        <form class="hero-form__form">
+            <div class="hero-form__oneline">
+                <input type="text" placeholder="New York, San Francisco, etc" class="hero-form__input">
+            </div>
+
+            <div class="hero-form__oneline">
+                <select class="js-select2 hero-form__select">
+                    <option>Select Property Type</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                </select>
+            </div>
+
+            <div class="hero-form__oneline">
+                <select class="js-select2 hero-form__select">
+                    <option>Select rooms</option>
+                    <option>1 Room</option>
+                    <option>2 Room</option>
+                    <option>3 Room</option>
+                </select>
+
+                <div class="hero-form__advance-search">
+                    <a href="#" class="hero-form__advance-search-link">
+                        <svg width="14" height="14" focusable="false" class="hero-form__advance-search-svg">
+                            <use href="./img/sprite.svg#filter"></use>
+                        </svg>
+                        <span>Advance Search</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-form__oneline--submit">
+                <button type="submit" class="btn btn-center btn-primary hero-form__btn">
+                    <svg width="20" height="20" focusable="false">
+                        <use href="./img/sprite.svg#search"></use>
+                    </svg>
+
+                    Search | Sale
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="hero-form__content js-tab-target" data-tab-target="rent">
+        <form class="hero-form__form">
+            <div class="hero-form__oneline">
+                <input type="text" placeholder="New York, San Francisco, etc" class="hero-form__input">
+            </div>
+
+            <div class="hero-form__oneline">
+                <select class="js-select2 hero-form__select">
+                    <option>Select Property Type</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                </select>
+            </div>
+
+            <div class="hero-form__oneline">
+                <select class="js-select2 hero-form__select">
+                    <option>Select rooms</option>
+                    <option>1 Room</option>
+                    <option>2 Room</option>
+                    <option>3 Room</option>
+                </select>
+
+                <div class="hero-form__advance-search">
+                    <a href="#" class="hero-form__advance-search-link">
+                        <svg width="14" height="14" focusable="false" class="hero-form__advance-search-svg">
+                            <use href="./img/sprite.svg#filter"></use>
+                        </svg>
+                        
+                        <span>Advance Search</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-form__oneline--submit">
+                <button type="submit" class="btn btn-center btn-primary hero-form__btn">
+                    <svg width="20" height="20" focusable="false">
+                        <use href="./img/sprite.svg#search"></use>
+                    </svg>
+                    Search | Rent
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+@import "scss-reset/reset.css";
+@import "../fonts/Poppins/stylesheet.css";
+
+// Abstract styles
+@import "abstract/all";
+
+// Common styles for different components
+@import "common/all";
+
+// Components
+@import "components/header/all";
+@import "components/hero/all";
+@import "components/aboutUs";
+@import "components/actionBanner";
+@import "components/blog";
+@import "components/latest";
+@import "components/neighborhood";
+@import "components/services";
+@import "components/team";
+@import "components/testimonials";
+@import "components/footer/all";
+
+// Plugins
+@import "~slick-carousel/slick/slick.css";
+@import '~select2/dist/css/select2.css'

@@ -1,0 +1,46 @@
+{% set services = [
+    {
+        "title": "Buy a New Home",
+        "description": "Donec porttitor euismod dignissim. Nullam a lacinia ipsum, nec dignissim purus."
+    }, {
+        "title": "Sell a House",
+        "description": "Donec porttitor"
+    }, {
+        "title": "Rent a House",
+        "description": "Donec porttitor euismod dignissim."
+    }
+] %}
+
+<section class="section section--margin section--padding section--grey services" data-target="services">
+    <div class="container">
+        <div class="title__wrapper title__wrapper--center title__wrapper--margin-bottom-big">
+            <div class="title__sub">
+                Our services
+            </div>
+
+            <div class="title__main">
+                <h2>Donec porttitor euismod dignissim</h2>
+            </div>
+        </div>
+
+        <div class="services__list">
+            {% for item in services %}
+                <div class="services__item">
+                    <div class="services__icon">
+                        <svg width="28" height="25" focusable="false" class="services__icon-svg">
+                            <use href="./img/sprite.svg#services-{{ loop.index }}"></use>
+                        </svg>
+                    </div>
+
+                    <div class="services__title">
+                        {{ item.title }}
+                    </div>
+                    
+                    <div class="services__description">
+                        {{ item.description }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

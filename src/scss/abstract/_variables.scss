@@ -1,0 +1,77 @@
+// Colors
+$color-black-grey:          #2b2b2b;
+$color-black:               #000;
+$color-blue:                #4361ee;
+$color-extra-light-grey:    #d4d4d4;
+$color-grey:                #808080;
+$color-light-black:         #0b090a;
+$color-light-blue:          #4cc9f0;
+$color-light-purple:        #7209b7;
+$color-ligth-grey:          #aaa;
+$color-purple:              #3a0ca3;
+$color-red:                 #f72585;
+$color-transparent:         transparent;
+$color-white:               #fff;
+$color-yellow:              #ffc700;
+
+$color-black-20:            rgba(0, 0, 0, 0.2);
+$color-blue-30:             rgba(67, 97, 238, 0.3);
+$color-blue-10:             rgba(67, 97, 238, 0.1);
+$color-extra-light-grey-20: rgba(212, 212, 212, 0.2);
+$color-extra-light-grey-30: rgba(212, 212, 212, 0.3);
+
+$color-primary:             $color-purple;
+
+$colod-badge-discount-text: #00ce3a;
+$colod-badge-discount: #f1fff1;
+$colod-badge-new-text: #119bff;
+$colod-badge-new: #d7eeff;
+$colod-badge-popular-text: #f11;
+$colod-badge-popular: #ffe1e1;
+
+// Transition
+$transition-global: all, 0.2s;
+$transition-long:   all, 0.5s;
+
+// Fonts
+$font-poppins: 'Poppins', Arial, sans-serif;
+
+// Font weights
+$fw-regular:    normal;
+$fw-medium:     500;
+$fw-semi-bold:  600;
+$fw-bold:       700;
+$fw-extra-bold: 800;
+
+// Font sizes
+$fs-xxl:        57px;
+$fs-xl:         40px;
+$fs-large:      27px;
+$fs-medium:     19px;
+$fs-base:       16px;
+$fs-small:      13px;
+
+// Line heights
+$lh-base:   1.6;
+$lh-small:  1.2;
+$lh-xs:     1;
+
+// Breakpoints
+$breakpoint-xs:  0;
+$breakpoint-sm:  576px;
+$breakpoint-md:  768px;
+$breakpoint-lg:  992px;
+$breakpoint-xl:  1200px;
+$breakpoint-xxl: 1400px;
+
+$grid-breakpoints: (
+    xs:   $breakpoint-xs,
+    sm:   $breakpoint-sm,
+    md:   $breakpoint-md,
+    lg:   $breakpoint-lg,
+    xl:   $breakpoint-xl,
+    xxl:  $breakpoint-xxl
+);
+
+// Container
+$container: 1230px;

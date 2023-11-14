@@ -1,0 +1,23 @@
+@mixin gradient-circle($type, $size, $rotate, $opacity) {
+    @if $type == "white" {
+        background: linear-gradient(180deg, $color-white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    @if $type == "blue" {
+        background: linear-gradient(180deg, $color-blue 0%, rgba(67, 97, 238, 0) 100%);
+    }
+
+    border-radius: 50%;
+    height: $size;
+    width: $size;
+
+    @if $opacity == null {
+        opacity: 0.5;
+    } @else {
+        opacity: $opacity;
+    }
+
+    @if $rotate != null {
+        transform: rotate($rotate);
+    }
+}

@@ -1,0 +1,80 @@
+.team {
+    &__container {
+        &::before {
+            @include media-breakpoint-up(lg) {
+                @include gradient-circle("blue", 100px, -30deg, null);
+
+                content: "";
+                position: absolute;
+                right: 65px;
+                top: -125px;
+            }
+        }
+    }
+
+    &__list {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 20px;
+
+        @include media-breakpoint-up(md) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 50px;
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__image {
+        border-radius: 120px 40px 40px;
+        display: inline-block;
+        margin-bottom: 10px;
+        max-width: 200px;
+        overflow: hidden;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 13px;
+        }
+
+        &::after {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+            content: '';
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &__name {
+        color: $color-light-black;
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        margin-bottom: 2px;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-large;
+            font-weight: $fw-semi-bold;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__position {
+        color: $color-blue;
+        font-size: $fs-small;
+        line-height: $lh-base;
+
+        @include media-breakpoint-up(lg) {
+            font-size: $fs-base;
+            font-weight: $fw-medium;
+        }
+    }
+}

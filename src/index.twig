@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Markup landing example for Github | Eugine Kunitsa (telegram: @ekunitsa94)</title>
+        <meta name="description" content="Markup landing example for Github">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+        <link rel="manifest" href="./img/site.webmanifest">
+        <link rel="mask-icon" href="./img/safari-pinned-tab.svg" color="#3a0ca3">
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <meta name="msapplication-TileColor" content="#3a0ca3">
+        <meta name="msapplication-config" content="./img/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="shadow-backdrop js-shadow-backdrop"></div>
+        {% include "./components/header/header.twig" %}
+
+        <main class="main__sections-wrapper">
+            {% include "./components/hero/hero.twig" %}
+            {% include "./components/aboutUs.twig" %}
+            {% include "./components/latest.twig" %}
+            {% include "./components/services.twig" %}
+            {% include "./components/neighborhood.twig" %}
+            {% include "./components/team.twig" %}
+            {% include "./components/blog.twig" %}
+            {% include "./components/testimonials.twig" %}
+            {% include "./components/actionBanner.twig" %}
+        </main>
+
+        {% include "./components/footer/footer.twig" %}
+
+        <div class="go-to-top js-go-to-top">
+            <div class="go-to-top__arrow">
+                <svg width="20" height="20" focusable="false">
+                    <use href="./img/sprite.svg#arrow-up"></use>
+                </svg>
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

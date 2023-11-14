@@ -1,0 +1,43 @@
+.top-line {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+        background-color: $color-primary;
+        color: $color-white;
+        display: block;
+        font-size: $fs-small;
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    &__container {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__support {
+        align-items: center;
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    &__address,
+    &__phone,
+    &__email {
+        align-items: center;
+        display: flex;
+        gap: 8px;
+    }
+
+    &__phone-link,
+    &__email-link {
+        color: $color-white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<section class="section section--margin">
+    <div class="container">
+        <div class="action-banner">
+            <div class="action-banner__description">
+                <div class="action-banner__title h2">
+                    Become a Agent.
+                </div>
+
+                <div class="action-banner__text">
+                    Fusce venenatis tellus a felis scelerisque. venenatis tellus a felis scelerisque.
+                </div>
+            </div>
+
+            <div class="action-banner__button">
+                <a href="#" class="btn btn-primary-invert">
+                    Register Now
+                </a>
+            </div>
+
+            <div class="action-banner__img-wrapper">
+                {% include "./utils/picture.twig" with {
+                    "path": "./img/", "name": "agent", "format": "png", "alt": "Become a Agent", "class": "action-banner__img"
+                } %}
+            </div>
+        </div>
+    </div>
+</section>
