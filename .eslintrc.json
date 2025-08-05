@@ -21,16 +21,16 @@
         "max-len": ["error", { "code": 200, "comments": 250 }],
         "no-dupe-keys": 2,
         "no-plusplus": 0,
-        "no-shadow": ["error", { "allow": ["err", "callback"]}],
+        "no-shadow": ["error", { "allow": ["err", "callback"] }],
         "prefer-const": 2,
         "vars-on-top": "off",
         "padding-line-between-statements": [
             "error",
             { "blankLine": "always", "prev": "*", "next": ["return", "block", "block-like"] },
             { "blankLine": "always", "prev": "directive", "next": "*" },
-            { "blankLine": "always", "prev": ["const", "let", "var", "block", "block-like"], "next": "*"},
+            { "blankLine": "always", "prev": ["const", "let", "var", "block", "block-like"], "next": "*" },
             { "blankLine": "any", "prev": "directive", "next": "directive" },
-            { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
+            { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
         ],
         "no-continue": 0,
         "no-else-return": 0,
